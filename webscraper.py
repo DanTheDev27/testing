@@ -8,7 +8,7 @@ import csv
 request_url = requests.get('https://microsoftedge.github.io/Demos/json-dummy-data/64KB-min.json')
 
 #pathtofile
-path = "D:/Users/soitguest/Documents"
+path = ""
 #write data to file in designated location
 fileLocation = os.path.join(path,'testFile'+'.json')
 """ with open(fileLocation,'w') as file:
