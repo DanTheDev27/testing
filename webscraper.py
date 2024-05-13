@@ -7,11 +7,11 @@ import os.path
 #url to scrape from
 request_url = requests.get('https://microsoftedge.github.io/Demos/json-dummy-data/64KB-min.json')
 
-with urllib.request.urlopen('https://microsoftedge.github.io/Demos/json-dummy-data/64KB-min.json') as url:
-    data = json.load(url)
-    #print(data)
 
-for item in data:
+data = urllib.request.urlopen('https://microsoftedge.github.io/Demos/json-dummy-data/64KB-min.json')
+url = json.load(data)
+
+for item in url:
     names = item['name']
     id = item['id']
     language = item['language']
@@ -23,7 +23,7 @@ for item in data:
 
 
 
-#code to save and write file
+# *****code to save and write file*****
 
 #Path where the file will be saved
 #path = ""
